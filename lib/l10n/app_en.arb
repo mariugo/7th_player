@@ -1,7 +1,51 @@
 {
-  "helloWorld": "Hello World!",
-  "@helloWorld": {
-    "description": "A programmer greeting"
+  "badRequest": "Bad Request",
+  "@badRequest": {
+    "description": "A server 400 error "
+  }
+  "unauthorized": "Unauthorized",
+  "@unauthorized": {
+    "description": "A server 401 error"
+  }
+  "notFound": "Not found",
+  "@notFound": {
+    "description": "A server 404 error "
+  }
+  "serviceUnavailable": "Service Unavailable, error: ",
+  "@serviceUnavailable": {
+    "description": "A service unavailable error"
+  }
+  "appError": "Application error: code 503",
+  "@appError": {
+    "description": "Application error"
+  }
+  "logo": "Seventh company logo",
+  "@logo": {
+    "description": "The company logo"
+  }
+  "username": "Username",
+  "@username": {
+    "description": "Username text"
+  }
+  "password": "Password",
+  "@password": {
+    "description": "Password text"
+  }
+  "login": "Login",
+  "@login": {
+    "description": "Login text"
+  }
+  "failedVideo": "Failed to load video",
+  "@failedVideo": {
+    "description": "Failed to load video text"
+  }
+  "invalidToken": "Invalid Token",
+  "@invalidToken": {
+    "description": "Invalid token text"
+  }
+  "serverFailure": "Server failure",
+  "@invalidToken": {
+    "description": "Server failure text"
   }
 }
 

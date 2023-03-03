@@ -1,3 +1,14 @@
 {
-  "helloWorld": "Olá Mundo"
+  "badRequest": "Má solicitação",
+  "unauthorized": "Não autorizado",
+  "notFound": "Não encontrado",
+  "serviceUnavailable": "Serviço indisponível, erro: ",
+  "appError": "Erro de aplicação: código 503",
+  "logo": "Logotipo da empresa",
+  "username": "Usuário",
+  "password": "Senha",
+  "login": "Entrar",
+  "failedVideo": "Falha ao carregar o vídeo",
+  "invalidToken": "Token inválido",
+  "serverFailure": "Falha do servidor",
 }
