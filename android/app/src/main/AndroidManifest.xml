@@ -1,7 +1,7 @@
 <manifest xmlns:android="http://schemas.android.com/apk/res/android"
     package="com.mariugo.seventh_player">
    <application
-        android:label="seventh_player"
+        android:label="Seventh Player"
         android:name="${applicationName}"
         android:icon="@mipmap/ic_launcher">
         <activity

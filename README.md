@@ -1,3 +1,3 @@
-# seventh_player
+# Seventh Player
 
-A new Flutter project.
+This project is under development.
