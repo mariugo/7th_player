@@ -27,10 +27,9 @@ jobs:
           cache: true
       - run: flutter pub get
       - run: flutter analyze
-      - run: flutter format --dry-run --set-exit-if-changed lib/
-      - run: flutter format --dry-run --set-exit-if-changed test/
+      - run: dart format -o none --set-exit-if-changed lib/
+      - run: dart format -o none --set-exit-if-changed test/
       - run: flutter test --coverage
-      - run: flutter test --machine > test-results.json
       - uses: VeryGoodOpenSource/very_good_coverage@v2.1.0
         with:
           min_coverage: 80
