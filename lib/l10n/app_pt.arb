@@ -11,4 +11,5 @@
   "failedVideo": "Falha ao carregar o vídeo",
   "invalidToken": "Token inválido",
   "serverFailure": "Falha do servidor",
+  "showPassword": "Mostrar senha"
 }
