@@ -9,8 +9,7 @@ import 'dart:typed_data' as _i6;
 
 import 'package:http/http.dart' as _i2;
 import 'package:mockito/mockito.dart' as _i1;
-import 'package:seventh_player/core/data/server/http_client_adapter.dart'
-    as _i3;
+import 'package:seventh_player/core/server/http_client_adapter.dart' as _i3;
 
 // ignore_for_file: type=lint
 // ignore_for_file: avoid_redundant_argument_values

@@ -1,7 +1,7 @@
 import 'dart:convert';
 
 import 'package:seventh_player/core/constants/server.dart';
-import 'package:seventh_player/core/data/server/http_client_adapter.dart';
+import 'package:seventh_player/core/server/http_client_adapter.dart';
 import 'package:seventh_player/core/domain/repositories/video_repository.dart';
 
 class VideoRepositoryImpl implements VideoRepository {
