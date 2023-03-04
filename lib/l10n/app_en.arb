@@ -47,5 +47,9 @@
   "@invalidToken": {
     "description": "Server failure text"
   }
+  "showPassword": "Show password",
+  "@showPassword": {
+    "description": "Show password text"
+  }
 }
 
