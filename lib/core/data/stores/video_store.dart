@@ -75,14 +75,20 @@ abstract class VideoStoreBase with Store {
     return showDialog(
       context: context,
       builder: (context) => AlertDialog(
-        content: const Text(
-          'Log out of Seventh Player?',
+        content: Text(
+          AppLocalizations.of(context)!.logoutMessage,
+          style: const TextStyle(
+            fontSize: 18,
+          ),
         ),
         actions: [
           TextButton(
             onPressed: () => Navigator.of(context).pop(),
-            child: const Text(
-              'Cancel',
+            child: Text(
+              AppLocalizations.of(context)!.cancel,
+              style: const TextStyle(
+                fontSize: 16,
+              ),
             ),
           ),
           TextButton(
@@ -91,8 +97,11 @@ abstract class VideoStoreBase with Store {
               Navigator.of(context).pushReplacement(
                   MaterialPageRoute(builder: (_) => LoginPage()));
             },
-            child: const Text(
-              'Log out',
+            child: Text(
+              AppLocalizations.of(context)!.logout,
+              style: const TextStyle(
+                fontSize: 16,
+              ),
             ),
           ),
         ],

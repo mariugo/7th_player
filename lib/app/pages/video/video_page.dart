@@ -4,6 +4,7 @@ import 'package:chewie/chewie.dart';
 import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:seventh_player/app/utils/custom_progress.dart';
 import 'package:seventh_player/core/data/stores/video_store.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class VideoPage extends StatefulWidget {
   const VideoPage({super.key});
@@ -34,8 +35,8 @@ class _VideoPageState extends State<VideoPage> {
       appBar: AppBar(
         actions: [
           TextButton.icon(
-            label: const Text(
-              'Log out',
+            label: Text(
+              AppLocalizations.of(context)!.logout,
             ),
             onPressed: () {
               videoStore.chewieController?.pause();
