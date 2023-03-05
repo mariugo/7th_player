@@ -1,6 +1,6 @@
 // GENERATED CODE - DO NOT MODIFY BY HAND
 
-part of 'helper_store.dart';
+part of 'user_data_store.dart';
 
 // **************************************************************************
 // StoreGenerator
@@ -8,9 +8,9 @@ part of 'helper_store.dart';
 
 // ignore_for_file: non_constant_identifier_names, unnecessary_brace_in_string_interps, unnecessary_lambdas, prefer_expression_function_bodies, lines_longer_than_80_chars, avoid_as, avoid_annotating_with_dynamic, no_leading_underscores_for_local_identifiers
 
-mixin _$HelperStore on HelperStoreBase, Store {
+mixin _$UserDataStore on UserDataStoreBase, Store {
   late final _$userModelAtom =
-      Atom(name: 'HelperStoreBase.userModel', context: context);
+      Atom(name: 'UserDataStoreBase.userModel', context: context);
 
   @override
   UserModel? get userModel {
@@ -26,7 +26,7 @@ mixin _$HelperStore on HelperStoreBase, Store {
   }
 
   late final _$tokenAccessAtom =
-      Atom(name: 'HelperStoreBase.tokenAccess', context: context);
+      Atom(name: 'UserDataStoreBase.tokenAccess', context: context);
 
   @override
   String? get tokenAccess {
@@ -42,7 +42,7 @@ mixin _$HelperStore on HelperStoreBase, Store {
   }
 
   late final _$createUserDataStorageAsyncAction =
-      AsyncAction('HelperStoreBase.createUserDataStorage', context: context);
+      AsyncAction('UserDataStoreBase.createUserDataStorage', context: context);
 
   @override
   Future<void> createUserDataStorage(UserModel user, String token) {
@@ -50,8 +50,9 @@ mixin _$HelperStore on HelperStoreBase, Store {
         .run(() => super.createUserDataStorage(user, token));
   }
 
-  late final _$readUserFromDataStorageAsyncAction =
-      AsyncAction('HelperStoreBase.readUserFromDataStorage', context: context);
+  late final _$readUserFromDataStorageAsyncAction = AsyncAction(
+      'UserDataStoreBase.readUserFromDataStorage',
+      context: context);
 
   @override
   Future<void> readUserFromDataStorage() {
@@ -60,7 +61,7 @@ mixin _$HelperStore on HelperStoreBase, Store {
   }
 
   late final _$deleteUserDataStorageAsyncAction =
-      AsyncAction('HelperStoreBase.deleteUserDataStorage', context: context);
+      AsyncAction('UserDataStoreBase.deleteUserDataStorage', context: context);
 
   @override
   Future<void> deleteUserDataStorage() {

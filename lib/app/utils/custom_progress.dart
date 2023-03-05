@@ -1,7 +1,6 @@
 import 'dart:math' as math;
 
 import 'package:flutter/material.dart';
-import 'package:seventh_player/core/utils/size_extensions.dart';
 
 class CustomProgress extends StatefulWidget {
   const CustomProgress({super.key});
@@ -29,8 +28,8 @@ class _CustomProgressState extends State<CustomProgress>
   Widget build(BuildContext context) {
     return Center(
       child: SizedBox(
-        width: context.percentWidth(.6),
-        height: context.percentHeight(.6),
+        width: 60,
+        height: 60,
         child: AnimatedBuilder(
           builder: (context, child) {
             return CustomPaint(

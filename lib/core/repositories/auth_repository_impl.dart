@@ -27,7 +27,7 @@ class AuthRepositoryImpl implements AuthRepository {
       }
       return httpClient.returnResponse(response);
     } catch (_) {
-      throw AppException(message: "Server error");
+      throw AppException(message: 'Error 503 Service Unavailable');
     }
   }
 }

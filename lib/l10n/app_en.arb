@@ -35,6 +35,18 @@
   "@login": {
     "description": "Login text"
   },
+  "logout": "Log out",
+  "@logout": {
+    "description": "Log out text"
+  },
+  "logoutMessage": "Log out of Seventh Player?",
+  "@logoutMessage": {
+    "description": "Logout text"
+  },
+  "cancel": "Cancel",
+  "@cancel": {
+    "description": "Cancel text"
+  },
   "failedVideo": "Failed to load video",
   "@failedVideo": {
     "description": "Failed to load video text"

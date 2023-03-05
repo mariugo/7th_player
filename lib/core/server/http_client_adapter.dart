@@ -20,15 +20,15 @@ class HttpClientAdapter extends http.BaseClient {
     switch (response.statusCode) {
       case 400:
         throw BadRequestException(
-          message: 'Bad Request ${responseDecoded['message']}',
+          message: '${responseDecoded['message']}',
         );
       case 401:
         throw UnauthorizedException(
-          message: 'Unauthorized ${responseDecoded['message']}',
+          message: '${responseDecoded['message']}',
         );
       case 404:
         throw NotFoundException(
-          message: 'Not Found ${responseDecoded['message']}',
+          message: '${responseDecoded['message']}',
         );
       default:
         break;
