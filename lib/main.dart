@@ -1,8 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
+import 'package:seventh_player/app/pages/login/login_page.dart';
 import 'package:seventh_player/app/theme/app_colors.dart';
+import 'package:seventh_player/core/initialization.dart';
 
 void main() {
+  WidgetsFlutterBinding.ensureInitialized();
+  Initialization().setUpInstances();
   runApp(const MainApp());
 }
 
@@ -26,7 +30,7 @@ class MainApp extends StatelessWidget {
       ),
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
-      home: const Placeholder(),
+      home: LoginPage(),
     );
   }
 }
