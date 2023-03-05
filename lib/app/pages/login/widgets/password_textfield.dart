@@ -1,4 +1,6 @@
 import 'package:flutter/material.dart';
+import 'package:seventh_player/core/utils/size_extensions.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 class PasswordTextField extends StatelessWidget {
   final String labelText;
@@ -34,11 +36,11 @@ class PasswordTextField extends StatelessWidget {
               value: checkbox,
               onChanged: checkboxOnChanged,
             ),
-            const SizedBox(
-              height: 10,
+            SizedBox(
+              height: context.percentHeight(.01),
             ),
-            const Text(
-              'Show Password',
+            Text(
+              AppLocalizations.of(context)!.showPassword,
             ),
           ],
         )
