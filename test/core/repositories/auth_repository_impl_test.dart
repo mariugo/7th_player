@@ -1,7 +1,7 @@
 import 'package:flutter_test/flutter_test.dart';
 import 'package:seventh_player/core/data/models/user_model.dart';
-import 'package:seventh_player/core/data/repositories/auth_repository_impl.dart';
-import 'package:seventh_player/core/data/server/http_client_adapter.dart';
+import 'package:seventh_player/core/repositories/auth_repository_impl.dart';
+import 'package:seventh_player/core/server/http_client_adapter.dart';
 import 'package:http/http.dart' as http;
 
 void main() {
