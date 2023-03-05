@@ -1,5 +1,7 @@
 import 'package:chewie/chewie.dart';
+import 'package:flutter/material.dart';
 import 'package:mobx/mobx.dart';
+import 'package:seventh_player/app/pages/login/widgets/login_page.dart';
 import 'package:seventh_player/core/data/stores/helper_store.dart';
 import 'package:seventh_player/core/data/stores/login_store.dart';
 import 'package:seventh_player/core/errors/exceptions.dart';
@@ -7,6 +9,7 @@ import 'package:seventh_player/core/repositories/video_repository_impl.dart';
 import 'package:seventh_player/core/server/http_client_adapter.dart';
 import 'package:video_player/video_player.dart';
 import 'package:get_it/get_it.dart';
+import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 
 part 'video_store.g.dart';
 
@@ -66,5 +69,34 @@ abstract class VideoStoreBase with Store {
       }
     }
     setLoading(false);
+  }
+
+  Future<void> showLogoutDialog(BuildContext context) {
+    return showDialog(
+      context: context,
+      builder: (context) => AlertDialog(
+        content: const Text(
+          'Log out of Seventh Player?',
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.of(context).pop(),
+            child: const Text(
+              'Cancel',
+            ),
+          ),
+          TextButton(
+            onPressed: () {
+              GetIt.instance.get<LoginStore>().logout();
+              Navigator.of(context).pushReplacement(
+                  MaterialPageRoute(builder: (_) => LoginPage()));
+            },
+            child: const Text(
+              'Log out',
+            ),
+          ),
+        ],
+      ),
+    );
   }
 }

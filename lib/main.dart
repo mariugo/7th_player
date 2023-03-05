@@ -1,6 +1,6 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:seventh_player/app/pages/login/login_page.dart';
+import 'package:seventh_player/app/pages/login/widgets/login_page.dart';
 import 'package:seventh_player/app/theme/app_colors.dart';
 import 'package:seventh_player/core/initialization.dart';
 
