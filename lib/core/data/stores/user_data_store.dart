@@ -3,11 +3,11 @@ import 'package:mobx/mobx.dart';
 import 'package:seventh_player/core/data/local/data_storage_impl.dart';
 import 'package:seventh_player/core/data/models/user_model.dart';
 
-part 'helper_store.g.dart';
+part 'user_data_store.g.dart';
 
-class HelperStore = HelperStoreBase with _$HelperStore;
+class UserDataStore = UserDataStoreBase with _$UserDataStore;
 
-abstract class HelperStoreBase with Store {
+abstract class UserDataStoreBase with Store {
   @observable
   UserModel? userModel;
 

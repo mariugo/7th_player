@@ -4,7 +4,7 @@ import 'package:flutter_mobx/flutter_mobx.dart';
 import 'package:seventh_player/app/pages/login/widgets/custom_textfield.dart';
 import 'package:seventh_player/app/pages/login/widgets/password_textfield.dart';
 import 'package:seventh_player/app/pages/video/video_page.dart';
-import 'package:seventh_player/core/data/stores/helper_store.dart';
+import 'package:seventh_player/core/data/stores/user_data_store.dart';
 import 'package:seventh_player/core/data/stores/login_store.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
 import 'package:seventh_player/core/utils/size_extensions.dart';
@@ -63,7 +63,7 @@ class LoginPage extends StatelessWidget {
                             .loginWithUsernamePassword(context)
                             .then(
                           (_) {
-                            if (GetIt.instance.get<HelperStore>().userModel !=
+                            if (GetIt.instance.get<UserDataStore>().userModel !=
                                 null) {
                               Navigator.of(context).pushReplacement(
                                 MaterialPageRoute(

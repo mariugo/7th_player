@@ -2,7 +2,7 @@ import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
 import 'package:mobx/mobx.dart';
 import 'package:seventh_player/core/data/models/user_model.dart';
-import 'package:seventh_player/core/data/stores/helper_store.dart';
+import 'package:seventh_player/core/data/stores/user_data_store.dart';
 import 'package:seventh_player/core/errors/exceptions.dart';
 import 'package:seventh_player/core/repositories/auth_repository_impl.dart';
 import 'package:seventh_player/core/server/http_client_adapter.dart';
@@ -58,7 +58,7 @@ abstract class LoginStoreBase with Store {
               httpClient: GetIt.instance<HttpClientAdapter>())
           .login(userModel);
       GetIt.instance
-          .get<HelperStore>()
+          .get<UserDataStore>()
           .createUserDataStorage(userModel, responseToken);
     } on AppException catch (error) {
       setErrorMessage(error.message);
@@ -77,6 +77,6 @@ abstract class LoginStoreBase with Store {
   }
 
   void logout() {
-    GetIt.instance.get<HelperStore>().deleteUserDataStorage();
+    GetIt.instance.get<UserDataStore>().deleteUserDataStorage();
   }
 }

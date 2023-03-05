@@ -2,7 +2,7 @@ import 'package:chewie/chewie.dart';
 import 'package:flutter/material.dart';
 import 'package:mobx/mobx.dart';
 import 'package:seventh_player/app/pages/login/widgets/login_page.dart';
-import 'package:seventh_player/core/data/stores/helper_store.dart';
+import 'package:seventh_player/core/data/stores/user_data_store.dart';
 import 'package:seventh_player/core/data/stores/login_store.dart';
 import 'package:seventh_player/core/errors/exceptions.dart';
 import 'package:seventh_player/core/repositories/video_repository_impl.dart';
@@ -51,7 +51,7 @@ abstract class VideoStoreBase with Store {
     const String fileName = 'bunny.mp4';
     try {
       final String token =
-          GetIt.instance.get<HelperStore>().tokenAccess.toString();
+          GetIt.instance.get<UserDataStore>().tokenAccess.toString();
       final response = await VideoRepositoryImpl(
               httpClient: GetIt.instance<HttpClientAdapter>())
           .getVideoUrl(token, fileName);
