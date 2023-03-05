@@ -1,16 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:flutter_gen/gen_l10n/app_localizations.dart';
-import 'package:get_it/get_it.dart';
 import 'package:seventh_player/app/pages/login/widgets/login_page.dart';
-import 'package:seventh_player/app/pages/video/video_page.dart';
 import 'package:seventh_player/app/theme/app_colors.dart';
-import 'package:seventh_player/core/data/stores/user_data_store.dart';
 import 'package:seventh_player/core/initialization.dart';
 
 void main() async {
   WidgetsFlutterBinding.ensureInitialized();
   Initialization().setUpInstances();
-  await GetIt.instance.get<UserDataStore>().readUserFromDataStorage();
   runApp(const MainApp());
 }
 
@@ -34,14 +30,7 @@ class MainApp extends StatelessWidget {
       ),
       localizationsDelegates: AppLocalizations.localizationsDelegates,
       supportedLocales: AppLocalizations.supportedLocales,
-      home: _firstPage(),
+      home: LoginPage(),
     );
-  }
-
-  Widget _firstPage() {
-    if (GetIt.instance.get<UserDataStore>().userModel != null) {
-      return const VideoPage();
-    }
-    return LoginPage();
   }
 }
